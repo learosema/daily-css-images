@@ -1,0 +1,219 @@
+/*************************** 
+ * daily css images - day 1 : zombie
+ */
+
+:root {
+    --hair-color: rgb(255, 231, 126);
+    --skin-color: #f0cd82;
+    --cloth-color: #B16a55;
+    --eye-color: #fff;
+    --eye-shadow: #fcc;
+    --eye-pupils-color: #c20;
+}
+
+body {
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    font-size: 20%;
+    position: relative;
+    width: 80vh;
+    height: 80vh;
+}
+
+.zombie {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.zombie__head {
+    position: absolute;
+    left: 35%;
+    top: 10%;
+    background: var(--skin-color);
+    border-radius: 45%;
+    width: 30%;
+    height: 30%;
+    overflow: hidden;
+    box-shadow: inset 2em .2em rgba(0,0,0,.2);
+    z-index: 3;
+}
+
+.zombie__hair {
+    position: absolute;
+    top: -5%;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    transform: rotate(15deg);
+    background: var(--hair-color);
+    border-radius: 50%;
+    box-shadow: inset -2em -2em rgba(255, 255, 255, .4), .5em .5em 1em rgba(0,0,0,.2);
+    z-index: 6;
+}
+
+.zombie__nose {
+    position: absolute;
+    left: 45%;
+    top: 30%;
+    width: 20%;
+    height: 30%;
+    transform: rotate(-35deg);
+    background: var(--skin-color);
+    box-shadow: inset -.5em -.5em rgba(255, 255, 255, .4), .5em .5em 1em rgba(0,0,0,.2);
+    border-radius: 50%;
+}
+
+.zombie__mouth {
+    position: absolute;
+    right: 20%;
+    top: 70%;
+    width: 45%;
+    height: 5%;
+    border-top: 1em solid #000;
+    box-shadow: inset 0 .5em rgba(0,0,0, .2);
+    border-radius: 50% / 100% 100% 0 0;
+}
+
+
+.zombie__mouth::after {
+    position: absolute;
+    content: '';
+    background: rgba(255,255,255,.4);
+    border-radius: 50%;
+    right: -10%;
+    top: 50%;
+    width: 20%;
+    height: 1000%;
+}
+
+.zombie__eye {
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+    box-shadow: inset 0 0 .5em rgba(0,0,0,.8), inset .5em .5em var(--eye-shadow), 0 0 .75em #000;
+    border: 1px solid #000;
+    background: var(--eye-color);
+}
+
+.zombie__eye::after {
+    position: absolute;
+    content: '';
+    left: 50%;
+    top: 50%;
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+    background: var(--eye-pupils-color);
+    box-shadow: inset 0 0 .5em rgba(0,0,0,.8);
+}
+
+
+.zombie__eye--left {
+    top: 20%;
+    left: 25%;
+    z-index: 5;
+}
+
+.zombie__eye--right {
+    top: 18%;
+    right: 25%;
+}
+
+.zombie__torsus {
+    position: absolute;
+    background: var(--skin-color);
+    width: 20%;
+    height: 35%;
+    border-radius: 15% 15% 0 15%;
+    left: 40%;
+    top: 35%;
+    box-shadow: inset 2em 0 rgba(0,0,0,.2);
+    z-index: 2;
+    overflow: hidden;
+    transform: rotate(-5deg);
+}
+
+.zombie__torsus::after {
+    position: absolute;
+    width: 150%;
+    height: 100%;
+    left: -20%;
+    background: var(--cloth-color);
+    box-shadow: inset 10em 0 rgba(0,0,0,.2);
+    
+    content: '';
+}
+
+.zombie__arm {
+    position: absolute;
+    width: 35%;
+    height: 5%;    
+    background: var(--skin-color);
+    transform-origin: 0 50%;
+    box-shadow: inset 0 2em rgba(0,0,0, .2);
+    z-index: 5;
+}
+
+.zombie__arm::after {
+    position: absolute;
+    content: '';
+    width: 80%;
+    height: 100%;
+    background: var(--cloth-color);
+
+    box-shadow: inset 0 2em rgba(0,0,0,.2);
+}
+
+.zombie__arm--left {
+    top: 43%;
+    left: 50%;
+    transform: rotate(5deg);
+    z-index: -1;
+}
+
+.zombie__arm--right {
+    top: 45%;
+    left: 50%;
+    transform: rotate(-15deg);
+}
+
+.zombie__leg {
+    position: absolute;
+    background: var(--skin-color);
+    width: 5%;
+    top: 65%;
+    height: 30%;
+    box-shadow: inset 2em 0 rgba(0,0,0,.2);
+    overflow: hidden;
+}
+
+.zombie__leg::after {
+    position: absolute;
+    content: '';
+    background: var(--cloth-color);
+    width: 100%;
+    height: 90%;
+    box-shadow: inset 2em 0 rgba(0,0,0,.2);
+}
+
+.zombie__leg.zombie__leg--right::after {
+    height: 80%;
+}
+
+.zombie__leg--left {
+    left: 45%;
+}
+
+.zombie__leg--right {
+    left: 55%;
+}
